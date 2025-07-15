@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeBud | Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* Evita el scroll horizontal */
+        }
+
+        .header-container {
+            position: relative;
+            width: 100%;
+            height: 100%; /* Puedes ajustar la altura según tus necesidades */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Asegura que la imagen de fondo no se desborde */
+        }
+
+        .header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* CAMBIO AQUÍ: Ruta relativa */
+            background-image: url('LifeBud-bg.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Envía la imagen de fondo detrás del contenido */
+        }
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1; /* Asegura que el logo y el icono estén por encima de la imagen de fondo */
+        }
+
+        .svg-icon {
+            /* Estilos para tu SVG. Ajusta el tamaño y el margen según tu icono */
+            width: 50px; /* Ancho del icono SVG */
+            height: 50px; /* Alto del icono SVG */
+            margin-bottom: 10px; /* Espacio entre el icono y el logo */
+            /* Aquí podrías agregar estilos para colorear el SVG si es necesario */
+        }
+
+        .logo {
+            max-width: 200px; /* Ancho máximo del logo */
+            height: auto; /* Mantiene la proporción */
+            display: block; /* Elimina espacio extra debajo de la imagen */
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            .header-container {
+                height: 300px; /* Reduce la altura en pantallas más pequeñas */
+            }
+
+            .logo {
+                max-width: 150px; /* Reduce el tamaño del logo en pantallas más pequeñas */
+            }
+
+            .svg-icon {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                height: 100%; /* Aún más pequeña en móviles */
+            }
+
+            .logo {
+                max-width: 120px; /* Ajusta el logo para móviles */
+            }
+
+            .svg-icon {
+                width: 30px;
+                height: 30px;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <div class="header-background"></div>
+        <div class="logo-container">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              
+            </svg>
+
+            <img src="Logo.svg" alt="Logo de la Empresa" class="logo">
+        </div>
+    </header>
+</body>
+</html>
